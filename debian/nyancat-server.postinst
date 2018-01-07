@@ -1,0 +1,8 @@
+#!/bin/sh
+
+set -e
+
+# Run reconf-inetd one last time to remove entries from /etc/inetd.conf
+reconf-inetd || true
+
+#DEBHELPER#

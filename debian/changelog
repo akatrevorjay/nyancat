@@ -1,0 +1,91 @@
+nyancat (1.5.1-1) unstable; urgency=medium
+
+  * New upstream release
+  * reconf-inetd is going to be removed from the archive; migrate
+    nyancat-server to use systemd socket activation. Mark package as linux-any
+    accordingly. kFreeBSD/Hurd users will have to manually configure their
+    inetd server. (Closes: #733866)
+  * Bump Standards-Version to 3.9.6
+      - No changes required
+  * d/rules: set DEB_BUILD_MAINT_OPTIONS=hardening=+all
+
+ -- Jonathan McCrohan <jmccrohan@gmail.com>  Sat, 13 Feb 2016 18:44:55 +0000
+
+nyancat (1.4.4-1) unstable; urgency=medium
+
+  * The 'MOAR NYANCAT' release
+  * New upstream release
+    - Skip telnet intro by default
+    - Add terminal size autodetection
+    - Minor animation frame fixes
+  * d/control: fix package description typo s/configuations/configurations/
+    (Closes: #736622)
+
+ -- Jonathan McCrohan <jmccrohan@gmail.com>  Thu, 17 Jul 2014 02:30:08 +0100
+
+nyancat (1.2.2-1) unstable; urgency=medium
+
+  * New upstream release
+    - Upstream homepage has changed; Replace references to
+      miku.acm.uiuc.edu with nyancat.dakko.us
+  * Bump Standards-Version to 3.9.5
+    - No changes required
+
+ -- Jonathan McCrohan <jmccrohan@gmail.com>  Fri, 13 Dec 2013 22:40:41 +0000
+
+nyancat (1.2.1-1) unstable; urgency=low
+
+  * New upstream release
+    - Fix hyphen-used-as-minus-sign errors in manpage. Thanks to Jakub Wilk
+      for reporting.
+  * Remove debian/nyancat.1
+    - Nyancat manpage has been pushed upstream
+
+ -- Jonathan McCrohan <jmccrohan@gmail.com>  Thu, 04 Jul 2013 00:57:22 +0100
+
+nyancat (1.2-1) unstable; urgency=low
+
+  * New upstream release
+    - Remove support for toaruos
+    - Rename animation.h to animation.c
+  * Upload to unstable
+  * Switch from git snapshots to upstream tarball releases
+    - Add debian/watch, remove old watchfile lintian override
+  * Bump Standards-Version to 3.9.4
+    - No changes required
+
+ -- Jonathan McCrohan <jmccrohan@gmail.com>  Mon, 01 Jul 2013 23:05:20 +0100
+
+nyancat (1.1+git20130307.43097eb-1) experimental; urgency=low
+
+  * New upstream snapshot
+    - Add support for the Suckless terminal
+    - Changed color palette to 256 color mode
+    - Fix potential bug in option processing code
+    - Add CHANGELOG file
+  * Update 01-nyancat-debhelper.patch to reflect upstream Makefile changes
+
+ -- Jonathan McCrohan <jmccrohan@gmail.com>  Thu, 14 Mar 2013 22:20:45 +0000
+
+nyancat (1.0+git20120523.99dc310-1) unstable; urgency=low
+
+  * New upstream snapshot
+    - Fixes buildflags being incorrectly passed
+    - Pushed nyancat manpage upstream; Removed Debian copy
+  * Switch to debhelper v9
+  * Use reconf-inetd to provide nyancat-server configs
+    - Provide nyancat-server as symlink to nyancat
+    - Add versioned dependency on nyancat
+    - Remove now redundant nyancat-server manpage and postrm
+    - Update package description to reflect this switch
+    - Update postinst to aid transition to reconf-inetd
+    - Add IPv6 support
+
+ -- Jonathan McCrohan <jmccrohan@gmail.com>  Tue, 05 Jun 2012 02:40:11 +0100
+
+nyancat (0.1+git20120401.5a88b86-1) unstable; urgency=low
+
+  * Initial release (Closes: #661565)
+   - Many thanks to Jakub Wilk for sponsoring this package. 
+
+ -- Jonathan McCrohan <jmccrohan@gmail.com>  Thu, 19 Apr 2012 23:01:49 +0100
