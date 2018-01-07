@@ -1,2 +1,2 @@
 version=3
-https://github.com/klange/nyancat/tags .*/(\d[\d\.]+)\.tar\.gz
+https://github.com/akatrevorjay/nyancat/tags .*/(\d[\d\.]+)\.tar\.gz

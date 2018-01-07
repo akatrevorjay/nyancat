@@ -1,3 +1,15 @@
+nyancat-patched (1.5.2-1) artful; urgency=medium
+
+  [ Trevor Joynson (trevorj) ]
+  * Adjustable refresh rate
+  * Fix a buffer overflow, remove strcpy() calls
+  * Copy in debianization
+  * Bump
+
+  [ Trevor Joynson (Debian) ]
+
+ -- Trevor Joynson (Debian) <debian@trevor.joynson.io>  Sat, 06 Jan 2018 22:13:46 -0800
+
 nyancat (1.5.1-1) unstable; urgency=medium
 
   * New upstream release
