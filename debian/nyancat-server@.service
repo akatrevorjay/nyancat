@@ -1,0 +1,12 @@
+[Unit]
+Description=nyancat-server
+Documentation=man:nyancat-server(1)
+
+[Service]
+User=nobody
+ExecStart=-/usr/bin/nyancat-server -t
+StandardInput=socket
+StandardOutput=socket
+
+[Install]
+WantedBy=multi-user.target

@@ -1,0 +1,28 @@
+Source: nyancat
+Section: misc
+Priority: extra
+Maintainer: Jonathan McCrohan <jmccrohan@gmail.com>
+Build-Depends: debhelper (>= 9), dh-systemd
+Standards-Version: 3.9.6
+Homepage: https://github.com/klange/nyancat
+
+Package: nyancat
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: Animated terminal Nyancat
+ nyancat is a program to display an animated poptart cat in your terminal.
+ .
+ This is a standalone program only. To serve nyancat to many users, the
+ nyancat-server package is required.
+
+Package: nyancat-server
+Architecture: all
+Depends: nyancat (>= ${source:Version}), ${misc:Depends}
+Conflicts: telnetd
+Description: Animated terminal Nyancat server configurations
+ nyancat-server contains the configurations required to quickly set up a nyancat
+ server. This allows the animated poptart cat to be served to many users via
+ telnet.
+ .
+ Installing this package will automatically configure and activate a nyancat
+ telnet server.
