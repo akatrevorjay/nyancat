@@ -335,6 +335,7 @@ void usage(char * argv[]) {
 			" -n --no-counter \033[3mDo not display the timer\033[0m\n"
 			" -s --no-title   \033[3mDo not set the titlebar text\033[0m\n"
 			" -e --no-clear   \033[3mDo not clear the display between frames\033[0m\n"
+			" -d --delay      \033[3mDelay image rendering by anywhere between 10ms and 1000ms\n"
 			" -f --frames     \033[3mDisplay the requested number of frames, then quit\033[0m\n"
 			" -r --min-rows   \033[3mCrop the animation from the top\033[0m\n"
 			" -R --max-rows   \033[3mCrop the animation from the bottom\033[0m\n"
@@ -370,6 +371,7 @@ int main(int argc, char ** argv) {
 		{"no-counter", no_argument,       0, 'n'},
 		{"no-title",   no_argument,       0, 's'},
 		{"no-clear",   no_argument,       0, 'e'},
+		{"delay",      required_argument, 0, 'd'},
 		{"frames",     required_argument, 0, 'f'},
 		{"min-rows",   required_argument, 0, 'r'},
 		{"max-rows",   required_argument, 0, 'R'},
@@ -380,9 +382,12 @@ int main(int argc, char ** argv) {
 		{0,0,0,0}
 	};
 
+	/* Time delay in milliseconds */
+	int delay_ms = 90; // Default to original value
+
 	/* Process arguments */
 	int index, c;
-	while ((c = getopt_long(argc, argv, "eshiItnf:r:R:c:C:W:H:", long_opts, &index)) != -1) {
+	while ((c = getopt_long(argc, argv, "eshiItnd:f:r:R:c:C:W:H:", long_opts, &index)) != -1) {
 		if (!c) {
 			if (long_opts[index].flag == 0) {
 				c = long_opts[index].val;
@@ -410,6 +415,10 @@ int main(int argc, char ** argv) {
 				break;
 			case 'n':
 				show_counter = 0;
+				break;
+			case 'd':
+				if (10 <= atoi(optarg) && atoi(optarg) <= 1000)
+					delay_ms = atoi(optarg);
 				break;
 			case 'f':
 				frame_count = atoi(optarg);
@@ -908,7 +917,7 @@ int main(int argc, char ** argv) {
 			i = 0;
 		}
 		/* Wait */
-		usleep(90000);
+		usleep(1000 * delay_ms);
 	}
 	return 0;
 }
