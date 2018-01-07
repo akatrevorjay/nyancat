@@ -1,4 +1,4 @@
-nyancat-patched (1.5.3-1ubuntu1~1.gbp63f47c) UNRELEASED; urgency=medium
+nyancat-patched (1.5.3-1ubuntu1~1.gbp63f47c~artful0) artful; urgency=medium
 
   ** SNAPSHOT build @63f47caa91ea17066e72cfe88b5757e553361e18 **
 
@@ -6,8 +6,10 @@ nyancat-patched (1.5.3-1ubuntu1~1.gbp63f47c) UNRELEASED; urgency=medium
   * Add client as well
 
   [ Trevor Joynson (Debian) ]
+  * Rebuild for artful
+  * Changed build-dependencies to packages available in artful
 
- -- Trevor Joynson (Debian) <debian@trevor.joynson.io>  Sun, 07 Jan 2018 01:30:58 -0800
+ -- Trevor Joynson (Debian) <debian@trevor.joynson.io>  Sun, 07 Jan 2018 01:31:17 -0800
 
 nyancat-patched (1.5.3-1) artful; urgency=medium
 
