@@ -1,3 +1,14 @@
+nyancat-patched (1.5.3-1ubuntu1~1.gbp63f47c) UNRELEASED; urgency=medium
+
+  ** SNAPSHOT build @63f47caa91ea17066e72cfe88b5757e553361e18 **
+
+  [ Trevor Joynson (trevorj) ]
+  * Add client as well
+
+  [ Trevor Joynson (Debian) ]
+
+ -- Trevor Joynson (Debian) <debian@trevor.joynson.io>  Sun, 07 Jan 2018 01:30:58 -0800
+
 nyancat-patched (1.5.3-1) artful; urgency=medium
 
   [ Trevor Joynson (trevorj) ]
