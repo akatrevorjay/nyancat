@@ -1,3 +1,13 @@
+nyancat-patched (1.5.3-1) artful; urgency=medium
+
+  [ Trevor Joynson (trevorj) ]
+  * Bump
+  * Dockerize
+
+  [ Trevor Joynson (Debian) ]
+
+ -- Trevor Joynson (Debian) <debian@trevor.joynson.io>  Sun, 07 Jan 2018 00:44:48 -0800
+
 nyancat-patched (1.5.2-1) artful; urgency=medium
 
   [ Trevor Joynson (trevorj) ]
